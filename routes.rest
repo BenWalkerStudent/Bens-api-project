@@ -1,8 +1,38 @@
-GET http://localhost:3000/ttech HTTP/1.1
+GET http://localhost:3001/ttech HTTP/1.1
 
 
 ### get the root path
-GET http://localhost:3000 HTTP/1.1
+GET http://localhost:3001 HTTP/1.1
 
 ### get all students
-GET http://localhost:3001/getAllStudents HTTP/1.1
+GET http://localhost:3001/students HTTP/1.1
+
+### get single student 
+GET http://localhost:3001/students/66ba2071fb31de67b99b3663 HTTP/1.1
+
+### create student
+POST http://localhost:3001/students HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName":"David",
+    "lastName":"Walker",
+    "email":"tophatman584@gmail.com",
+    "age":17,
+    "currentCollege":"TooeleTech-Welding"
+}
+
+### update student
+PATCH http://localhost:3001/students/66ba2071fb31de67b99b3663 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName":"benjamins",
+    "lastName":"Walker",
+    "email":"ben.and.david.walker@gmail.com",
+    "age":16,
+    "currentCollege":"TooeleTech-SoftwareDevelopment"
+}
+
+### delete student 
+DELETE http://localhost:3001/students/66bb8c4e3b28e1b1e6fd24c1

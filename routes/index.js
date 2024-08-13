@@ -5,6 +5,7 @@ routes.get("/", myController.awesomeFunction);
 
 routes.get("/ttech", myController.tooeleTech);
 
-routes.get('/getAllStudents', myController.getAllStudents)
+//student router
+routes.use('/students', require('./student'))
 
 module.exports = routes;
